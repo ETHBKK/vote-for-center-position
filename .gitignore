@@ -42,3 +42,4 @@ contracts/cache
 contracts/broadcast
 contracts/out
 contracts/lib
+contracts/.env

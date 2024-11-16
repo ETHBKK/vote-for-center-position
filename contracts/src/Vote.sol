@@ -10,6 +10,9 @@ contract Vote {
 
     uint256 constant L1_OWNWESHIP_STORAGE_SLOT = 6;
 
+    // in our caseeach user just allow to mint one NFT
+    uint256 constant USER_TOKEN_INDEX = 0;
+
     // Enum for TeamMemberID
     enum TeamMemberID {
         NONE,
@@ -25,10 +28,10 @@ contract Vote {
     }
 
     // Mapping from CandidateId to vote count
-    mapping(TeamMemberID => uint256) public votes;
+    mapping(TeamMemberID => uint256) public memberIDToVotes;
 
     // Mapping to track if an address has voted
-    mapping(uint256 => TeamMemberID) public hasVoted;
+    mapping(uint256 => TeamMemberID) public tokenIDVoteRecords;
 
     // Event to emit when a vote is cast
     event VoteCast(address voter, TeamMemberID teamMemberId);
@@ -37,7 +40,7 @@ contract Vote {
     function vote(TeamMemberID _teamMemberId) public {
         require(canVote(_teamMemberId), "You have already voted");
 
-        votes[_teamMemberId]++;
+        memberIDToVotes[_teamMemberId]++;
 
         emit VoteCast(msg.sender, _teamMemberId);
     }
@@ -45,8 +48,8 @@ contract Vote {
     // Function to check if caller can vote
     function canVote(TeamMemberID _teamMemberId) public returns (bool) {
         uint256 tokenId = _loadDataFromL1(msg.sender);
-        if (hasVoted[tokenId] == TeamMemberID.NONE) {
-            hasVoted[tokenId] = _teamMemberId;
+        if (tokenIDVoteRecords[tokenId] == TeamMemberID.NONE) {
+            tokenIDVoteRecords[tokenId] = _teamMemberId;
             return true;
         }
         return false;
@@ -59,7 +62,8 @@ contract Vote {
         require(balance == 1, "You don't have any balance");
 
         // get token_id from L1
-        uint256 tokenId = loadL1Storage.retrieveL1AddressToMapping(L1_OWNWESHIP_STORAGE_SLOT, _address);
+        uint256 tokenId =
+            loadL1Storage.retrieveL1AddressToNestMapping(L1_OWNWESHIP_STORAGE_SLOT, _address, USER_TOKEN_INDEX);
         return tokenId;
     }
 }
