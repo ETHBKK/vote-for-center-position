@@ -1,14 +1,137 @@
 "use client";
 
-import { useActiveAccount } from "thirdweb/react";
+import { useReadContract } from "thirdweb/react";
+import { getContract } from "thirdweb";
 
-import { ConnectBtn } from "@/components/ui/thirdweb/connect-btn";
 import { useTwebContext } from "@/contexts/thirdweb";
+import { client } from "@/lib/thirdweb-client";
+import { scrollDevnet } from "@/const/chains";
+import { l2VoteContractAddress } from "@/const/contracts";
+
+const l2VoteContract = getContract({
+  client,
+  chain: scrollDevnet,
+  address: l2VoteContractAddress,
+  abi: [
+    {
+      "type": "constructor",
+      "inputs": [
+        {
+          "name": "_loadL1StorageAddress",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "_loadDataFromL1",
+      "inputs": [
+        { "name": "_address", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "canVote",
+      "inputs": [
+        {
+          "name": "_teamMemberId",
+          "type": "uint8",
+          "internalType": "enum Vote.TeamMemberID"
+        }
+      ],
+      "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "hasVoted",
+      "inputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8",
+          "internalType": "enum Vote.TeamMemberID"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "loadL1Storage",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "contract LoadL1Storage"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "vote",
+      "inputs": [
+        {
+          "name": "_teamMemberId",
+          "type": "uint8",
+          "internalType": "enum Vote.TeamMemberID"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "votes",
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint8",
+          "internalType": "enum Vote.TeamMemberID"
+        }
+      ],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "event",
+      "name": "VoteCast",
+      "inputs": [
+        {
+          "name": "voter",
+          "type": "address",
+          "indexed": false,
+          "internalType": "address"
+        },
+        {
+          "name": "teamMemberId",
+          "type": "uint8",
+          "indexed": false,
+          "internalType": "enum Vote.TeamMemberID"
+        }
+      ],
+      "anonymous": false
+    }
+  ]
+});
 
 export default function Home() {
+
   const { loggedIn } = useTwebContext();
-  const activeAccount = useActiveAccount();
-  console.log({ activeAccount })
+
+  const { data, isPending } = useReadContract({
+    contract: l2VoteContract,
+    method: "votes",
+    params: [1],
+  });
+
+  console.log({ data, isPending })
+
 
   if (!loggedIn) {
     return (
@@ -16,7 +139,6 @@ export default function Home() {
         <div className="space-y-6">
           <div className="space-y-4">
             <h3 className="text-xl font-medium">Oops! Login to vote for your favourite Moo Deng member to stand in center!</h3>
-            <ConnectBtn />
           </div>
         </div>
       </section>
@@ -24,10 +146,8 @@ export default function Home() {
   }
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        HOME
-      </main>
-    </div>
+    <section>
+      HOME
+    </section>
   );
 }
