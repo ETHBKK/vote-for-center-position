@@ -13,11 +13,12 @@ import { client } from "@/lib/thirdweb-client";
 
 const wallets = [
   createWallet("io.metamask"),
+  createWallet("com.coinbase.wallet"),
 ];
 
 interface ITwebContext {
   client: ThirdwebClient,
-  wallets: (Wallet<"io.metamask"> | Wallet<"com.coinbase.wallet"> | Wallet<"walletConnect"> | Wallet<"inApp">)[],
+  wallets: (Wallet<"io.metamask"> | Wallet<"com.coinbase.wallet">)[],
   setLoggedIn: Dispatch<SetStateAction<boolean>>,
   loggedIn: boolean
 }
