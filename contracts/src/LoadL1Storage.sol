@@ -4,8 +4,6 @@ pragma solidity 0.8.28;
 contract LoadL1Storage {
     address immutable L1SLOAD_PRECOMPILE = 0x0000000000000000000000000000000000000101;
     address immutable l1sloadContractAddress;
-    // each user just allow to mint one NFT
-    uint256 constant USER_TOKEN_INDEX = 0;
 
     constructor(address _l1sloadContractAddress) {
         l1sloadContractAddress = _l1sloadContractAddress;
@@ -30,13 +28,13 @@ contract LoadL1Storage {
     }
 
     // Retrieve mapping(address => mapping(uint256 => uint256))
-    function retrieveL1AddressToNestMapping(uint256 variableStorageSlot, address _mappingAddress)
-        public
-        view
-        returns (uint256)
-    {
+    function retrieveL1AddressToNestMapping(
+        uint256 variableStorageSlot,
+        address _mappingAddress,
+        uint256 _mappingUintIndex
+    ) public view returns (uint256) {
         bytes32 initialSlot = keccak256(abi.encodePacked(uint256(uint160(_mappingAddress)), variableStorageSlot));
-        bytes32 finalSlot = keccak256(abi.encodePacked(USER_TOKEN_INDEX, initialSlot));
+        bytes32 finalSlot = keccak256(abi.encodePacked(_mappingUintIndex, initialSlot));
 
         (bool success, bytes memory data) =
             L1SLOAD_PRECOMPILE.staticcall(abi.encodePacked(l1sloadContractAddress, finalSlot));
