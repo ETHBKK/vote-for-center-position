@@ -19,8 +19,8 @@ export default function ImageGallery() {
               alt={image.alt}
               objectFit="cover"
               className="rounded-lg"
-              height={200}
-              width={200}
+              height={300}
+              width={300}
             />
           </div>
         ))}

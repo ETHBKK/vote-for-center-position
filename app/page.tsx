@@ -172,7 +172,7 @@ export default function Home() {
 
   return (
     <section>
-      <h1 className="text-2xl font-bold text-center my-8">Moo Deng</h1>
+      <h1 className="text-2xl font-bold text-center my-6">Vote to select the girl group member for the center position</h1>
       <ImageGallery />
     </section>
   );
