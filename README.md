@@ -1,5 +1,5 @@
-## Overview 🎤 🎤 🎤 
-Welcome to our project for the ETHGlobal Bangkok 2024 Hackathon, where we bring K-pop fans, blockchain tech, and a sprinkle of Web3 magic together! 🎉
+## Overview 
+🎤 🎤 Welcome to our project for the ETHGlobal Bangkok 2024 Hackathon, where we bring K-pop fans, blockchain tech, and a sprinkle of Web3 magic together! 🎉
 
 What’s the big idea? We’re using Scroll’s L1Sload feature (a fancy tool that lets L2s read data from L1) to let fans vote for their favorite idol’s center position in a decentralized, secure, and undeniably fun way. 🚀✨
 
