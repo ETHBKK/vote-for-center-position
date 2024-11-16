@@ -4,12 +4,11 @@ pragma solidity ^0.8.22;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract MooDengFan is ERC721, ERC721Enumerable, Ownable {
+contract MooDengFan is ERC721, ERC721Enumerable {
     uint256 private _nextTokenId;
 
-    constructor(address initialOwner) ERC721("MooDengFan", "MDF") Ownable(initialOwner) {}
+    constructor() ERC721("MooDengFan", "MDF") {}
 
     function _baseURI() internal pure override returns (string memory) {
         return "ipfs://QmPMc4tcBsMqLRuCQtPmPe84bpSjrC3Ky7t3JWuHXYB4aS";
@@ -23,20 +22,24 @@ contract MooDengFan is ERC721, ERC721Enumerable, Ownable {
     }
 
     // The following functions are overrides required by Solidity.
-
-    function _update(address to, uint256 tokenId, address auth)
-        internal
-        override(ERC721, ERC721Enumerable)
-        returns (address)
-    {
+    function _update(
+        address to,
+        uint256 tokenId,
+        address auth
+    ) internal override(ERC721, ERC721Enumerable) returns (address) {
         return super._update(to, tokenId, auth);
     }
 
-    function _increaseBalance(address account, uint128 value) internal override(ERC721, ERC721Enumerable) {
+    function _increaseBalance(
+        address account,
+        uint128 value
+    ) internal override(ERC721, ERC721Enumerable) {
         super._increaseBalance(account, value);
     }
 
-    function supportsInterface(bytes4 interfaceId) public view override(ERC721, ERC721Enumerable) returns (bool) {
+    function supportsInterface(
+        bytes4 interfaceId
+    ) public view override(ERC721, ERC721Enumerable) returns (bool) {
         return super.supportsInterface(interfaceId);
     }
 }
