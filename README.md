@@ -6,7 +6,7 @@ What’s the big idea? We’re using Scroll’s L1SLOAD feature (a fancy tool th
 ### Why This Project?
 This whole thing started when we saw the amazing Scroll’s L1SLOAD proposal and the shiny CDP x HYBE prize for creator-economy projects. That’s when the lightbulb moment happened:
 
-L1 has lots of trusted data, especially valuable membership NFTs such as CryptoPunks and Bored Ape Yacht Club! However, making use of these membership NFTs on L1 will require users spend more gas to perform any further actions. 
+There are tons of valuable data on L1, especially valuable membership NFTs such as CryptoPunks and Bored Ape Yacht Club! However, making use of these membership NFTs on L1 will require users spend more gas to perform any further actions. 
 L2 is where all the fun happens—faster, cheaper, and cooler.
 So, we asked ourselves: What if fans could use an L1 fandom NFT (proof they’re a real stan) to vote for their idol on L2? Suddenly, we were building a playground for K-pop fans and showing off how L2s can flex their muscles in practical, real-world use cases.
 
