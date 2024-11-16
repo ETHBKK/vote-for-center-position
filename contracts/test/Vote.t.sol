@@ -83,8 +83,20 @@ contract VoteTest is Test {
             abi.encode(0)
         );
 
+        // Add mock for token ID data
+        vm.mockCall(
+            address(loadL1Storage),
+            abi.encodeWithSelector(
+                LoadL1Storage.retrieveL1AddressToNestMapping.selector,
+                L1_OWNWESHIP_STORAGE_SLOT,
+                bob,
+                0
+            ),
+            abi.encode(2) // Token ID 2 for bob
+        );
+
         vm.prank(bob);
-        vm.expectRevert("You don't have any balance");
+        vm.expectRevert("You don't have any balance to vote");
         vote.vote(Vote.TeamMemberID.BOB);
     }
 

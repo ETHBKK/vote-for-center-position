@@ -38,38 +38,35 @@ contract Vote {
 
     // Function to vote for a candidate
     function vote(TeamMemberID _teamMemberId) public {
-        require(canVote(_teamMemberId), "You have already voted");
+        (uint256 balance, uint256 tokenId) = _loadDataFromL1(msg.sender);
 
+        require(balance == 1, "You don't have any balance to vote");
+        require(
+            tokenIDToVotedMemberID[tokenId] == TeamMemberID.NONE,
+            "You have already voted"
+        );
+
+        tokenIDToVotedMemberID[tokenId] = _teamMemberId;
         memberIDToVotes[_teamMemberId]++;
 
         emit VoteCast(msg.sender, _teamMemberId);
     }
 
-    // Function to check if caller can vote
-    function canVote(TeamMemberID _teamMemberId) public returns (bool) {
-        uint256 tokenId = _loadDataFromL1(msg.sender);
-        if (tokenIDToVotedMemberID[tokenId] == TeamMemberID.NONE) {
-            tokenIDToVotedMemberID[tokenId] = _teamMemberId;
-            return true;
-        }
-        return false;
-    }
-
-    // Function to check if caller can vote
-    function _loadDataFromL1(address _address) public view returns (uint256) {
+    // Function to get the data from L1
+    function _loadDataFromL1(
+        address _address
+    ) private view returns (uint256, uint256) {
         // check balance
         uint256 balance = loadL1Storage.retrieveL1AddressToMapping(
             L1_BALANCE_STORAGE_SLOT,
             _address
         );
-        require(balance == 1, "You don't have any balance");
-
         // get token_id from L1
         uint256 tokenId = loadL1Storage.retrieveL1AddressToNestMapping(
             L1_OWNWESHIP_STORAGE_SLOT,
             _address,
             USER_TOKEN_INDEX
         );
-        return tokenId;
+        return (balance, tokenId);
     }
 }
