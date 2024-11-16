@@ -18,28 +18,6 @@ export const voteAbi = [
   },
   {
     "type": "function",
-    "name": "_loadDataFromL1",
-    "inputs": [
-      { "name": "_address", "type": "address", "internalType": "address" }
-    ],
-    "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
-    "stateMutability": "view"
-  },
-  {
-    "type": "function",
-    "name": "canVote",
-    "inputs": [
-      {
-        "name": "_teamMemberId",
-        "type": "uint8",
-        "internalType": "enum Vote.TeamMemberID"
-      }
-    ],
-    "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
-    "stateMutability": "nonpayable"
-  },
-  {
-    "type": "function",
     "name": "loadL1Storage",
     "inputs": [],
     "outputs": [
@@ -129,28 +107,6 @@ export const l2VoteContract = getContract({
     },
     {
       "type": "function",
-      "name": "_loadDataFromL1",
-      "inputs": [
-        { "name": "_address", "type": "address", "internalType": "address" }
-      ],
-      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
-      "stateMutability": "view"
-    },
-    {
-      "type": "function",
-      "name": "canVote",
-      "inputs": [
-        {
-          "name": "_teamMemberId",
-          "type": "uint8",
-          "internalType": "enum Vote.TeamMemberID"
-        }
-      ],
-      "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
-      "stateMutability": "nonpayable"
-    },
-    {
-      "type": "function",
       "name": "loadL1Storage",
       "inputs": [],
       "outputs": [
@@ -220,5 +176,5 @@ export const l2VoteContract = getContract({
       ],
       "anonymous": false
     }
-  ],
+  ]
 });
