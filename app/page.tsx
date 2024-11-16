@@ -125,13 +125,37 @@ export default function Home() {
 
   const { loggedIn } = useTwebContext();
 
-  const { data, isPending } = useReadContract({
+  const { data: vote1Data, isPending: isVote1DataPending } = useReadContract({
     contract: l2VoteContract,
     method: "votes",
     params: [1],
   });
 
-  console.log({ data, isPending })
+  const { data: vote2Data, isPending: isVote2DataPending } = useReadContract({
+    contract: l2VoteContract,
+    method: "votes",
+    params: [2],
+  });
+
+  const { data: vote3Data, isPending: isVote3DataPending } = useReadContract({
+    contract: l2VoteContract,
+    method: "votes",
+    params: [3],
+  });
+
+  const { data: vote4Data, isPending: isVote4DataPending } = useReadContract({
+    contract: l2VoteContract,
+    method: "votes",
+    params: [4],
+  });
+
+  const { data: vote5Data, isPending: isVote5DataPending } = useReadContract({
+    contract: l2VoteContract,
+    method: "votes",
+    params: [5],
+  });
+
+  console.log({ vote1Data, isVote1DataPending, vote2Data, isVote2DataPending, vote3Data, isVote3DataPending, vote4Data, isVote4DataPending, vote5Data, isVote5DataPending })
 
 
   if (!loggedIn) {
