@@ -9,7 +9,7 @@ import {
   createWallet,
   Wallet,
 } from "thirdweb/wallets";
-import { client } from "@/lib/thirdweb-client";
+import { client } from "@/libs/thirdweb-client";
 
 const wallets = [
   createWallet("io.metamask"),

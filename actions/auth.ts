@@ -1,7 +1,7 @@
 "use server";
 import { VerifyLoginPayloadParams, createAuth } from "thirdweb/auth";
 import { privateKeyToAccount } from "thirdweb/wallets";
-import { client } from "@/lib/thirdweb-client";
+import { client } from "@/libs/thirdweb-client";
 import { cookies } from "next/headers";
 
 const JWT_COOKIE_NAME = "jwt";
