@@ -4,7 +4,7 @@ import { TwebProvider } from "@/contexts/thirdweb";
 
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
-// import { Footer } from "@/components/site-footer";
+import { Footer } from "@/components/site-footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background font-sans antialiased`}
       >
         <TwebProvider>
           <div className="relative min-h-screen flex flex-col bg-background">
@@ -38,7 +38,7 @@ export default function RootLayout({
             <main className="flex-1 container">
               {children}
             </main>
-            {/* <Footer /> */}
+            <Footer />
             <Toaster />
           </div>
         </TwebProvider>
