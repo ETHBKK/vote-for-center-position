@@ -6,9 +6,9 @@ What’s the big idea? We’re using Scroll’s L1SLOAD feature (a fancy tool th
 ### Why This Project?
 This whole thing started when we saw the amazing Scroll’s L1SLOAD proposal and the shiny CDP x HYBE prize for creator-economy projects. That’s when the lightbulb moment happened:
 
-L1 has loads of trusted data, like NFTs!
+L1 has lots of trusted data, especially valuable membership NFTs such as CryptoPunks and Bored Ape Yacht Club! However, making use of these membership NFTs on L1 will require users spend more gas to perform any further actions. 
 L2 is where all the fun happens—faster, cheaper, and cooler.
-So, we asked ourselves: What if fans could use an L1 NFT (proof they’re a real stan) to vote for their idol on L2? Suddenly, we were building a playground for K-pop fans and showing off how L2s can flex their muscles in practical, real-world use cases.
+So, we asked ourselves: What if fans could use an L1 fandom NFT (proof they’re a real stan) to vote for their idol on L2? Suddenly, we were building a playground for K-pop fans and showing off how L2s can flex their muscles in practical, real-world use cases.
 
 ### How It Works
 Get your qualification badge (NFT): Fans need a K-pop NFT on L1.
@@ -22,44 +22,21 @@ K-pop stans are serious about their idols (and so are we). By combining L1’s t
 
 ## Getting Started
 
-First, run the development server:
+First, create a `.env` file and clone the environmental variables from `.env.example` and fill them up. 
+
+Then, run the frontend application development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-
 ## Contracts
-All the contracts are in the [contracts folder](./contracts).
+All the contracts are in the [contracts folder](./contracts). 
 
 ## Future Work
-- not just NFT works, can be used for other things.
-- more fun stuffs can be built on L2.
+- may make use of AI tool like CDP AgentKit to automate the smart contract deployment
+- not limit to NFT as membership, we can read more data from L1 (eg: identity on L1, previous music album purchase transaction on L1 - airdrop the loyal fans some benefits or loyalty badges, and so on!)
+- more fun decisions to be voted by the fandom (eg: merchandise on concert, theme of the next album, who goes SOLO next) 
