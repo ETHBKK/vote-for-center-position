@@ -1,125 +1,11 @@
 "use client";
 
 import { useReadContract } from "thirdweb/react";
-import { getContract } from "thirdweb";
 
 import { useTwebContext } from "@/contexts/thirdweb";
-import { client } from "@/lib/thirdweb-client";
-import { scrollDevnet } from "@/const/chains";
-import { l2VoteContractAddress } from "@/const/contracts";
 import ImageGallery from "@/components/image-gallery";
+import { l2VoteContract } from "@/lib/vote-contract";
 
-const l2VoteContract = getContract({
-  client,
-  chain: scrollDevnet,
-  address: l2VoteContractAddress,
-  abi: [
-    {
-      "type": "constructor",
-      "inputs": [
-        {
-          "name": "_loadL1StorageAddress",
-          "type": "address",
-          "internalType": "address"
-        }
-      ],
-      "stateMutability": "nonpayable"
-    },
-    {
-      "type": "function",
-      "name": "_loadDataFromL1",
-      "inputs": [
-        { "name": "_address", "type": "address", "internalType": "address" }
-      ],
-      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
-      "stateMutability": "view"
-    },
-    {
-      "type": "function",
-      "name": "canVote",
-      "inputs": [
-        {
-          "name": "_teamMemberId",
-          "type": "uint8",
-          "internalType": "enum Vote.TeamMemberID"
-        }
-      ],
-      "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
-      "stateMutability": "nonpayable"
-    },
-    {
-      "type": "function",
-      "name": "hasVoted",
-      "inputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint8",
-          "internalType": "enum Vote.TeamMemberID"
-        }
-      ],
-      "stateMutability": "view"
-    },
-    {
-      "type": "function",
-      "name": "loadL1Storage",
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "",
-          "type": "address",
-          "internalType": "contract LoadL1Storage"
-        }
-      ],
-      "stateMutability": "view"
-    },
-    {
-      "type": "function",
-      "name": "vote",
-      "inputs": [
-        {
-          "name": "_teamMemberId",
-          "type": "uint8",
-          "internalType": "enum Vote.TeamMemberID"
-        }
-      ],
-      "outputs": [],
-      "stateMutability": "nonpayable"
-    },
-    {
-      "type": "function",
-      "name": "votes",
-      "inputs": [
-        {
-          "name": "",
-          "type": "uint8",
-          "internalType": "enum Vote.TeamMemberID"
-        }
-      ],
-      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
-      "stateMutability": "view"
-    },
-    {
-      "type": "event",
-      "name": "VoteCast",
-      "inputs": [
-        {
-          "name": "voter",
-          "type": "address",
-          "indexed": false,
-          "internalType": "address"
-        },
-        {
-          "name": "teamMemberId",
-          "type": "uint8",
-          "indexed": false,
-          "internalType": "enum Vote.TeamMemberID"
-        }
-      ],
-      "anonymous": false
-    }
-  ]
-});
 
 export default function Home() {
 
@@ -127,31 +13,31 @@ export default function Home() {
 
   const { data: vote1Data, isPending: isVote1DataPending } = useReadContract({
     contract: l2VoteContract,
-    method: "votes",
+    method: "memberIDToVotes",
     params: [1],
   });
 
   const { data: vote2Data, isPending: isVote2DataPending } = useReadContract({
     contract: l2VoteContract,
-    method: "votes",
+    method: "memberIDToVotes",
     params: [2],
   });
 
   const { data: vote3Data, isPending: isVote3DataPending } = useReadContract({
     contract: l2VoteContract,
-    method: "votes",
+    method: "memberIDToVotes",
     params: [3],
   });
 
   const { data: vote4Data, isPending: isVote4DataPending } = useReadContract({
     contract: l2VoteContract,
-    method: "votes",
+    method: "memberIDToVotes",
     params: [4],
   });
 
   const { data: vote5Data, isPending: isVote5DataPending } = useReadContract({
     contract: l2VoteContract,
-    method: "votes",
+    method: "memberIDToVotes",
     params: [5],
   });
 

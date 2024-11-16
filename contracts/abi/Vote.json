@@ -1,1 +1,281 @@
-{"abi":[{"type":"constructor","inputs":[{"name":"_loadL1StorageAddress","type":"address","internalType":"address"}],"stateMutability":"nonpayable"},{"type":"function","name":"_loadDataFromL1","inputs":[{"name":"_address","type":"address","internalType":"address"}],"outputs":[{"name":"","type":"uint256","internalType":"uint256"}],"stateMutability":"view"},{"type":"function","name":"canVote","inputs":[{"name":"_teamMemberId","type":"uint8","internalType":"enum Vote.TeamMemberID"}],"outputs":[{"name":"","type":"bool","internalType":"bool"}],"stateMutability":"nonpayable"},{"type":"function","name":"loadL1Storage","inputs":[],"outputs":[{"name":"","type":"address","internalType":"contract LoadL1Storage"}],"stateMutability":"view"},{"type":"function","name":"memberIDToVotes","inputs":[{"name":"","type":"uint8","internalType":"enum Vote.TeamMemberID"}],"outputs":[{"name":"","type":"uint256","internalType":"uint256"}],"stateMutability":"view"},{"type":"function","name":"tokenIDToVotedMemberID","inputs":[{"name":"","type":"uint256","internalType":"uint256"}],"outputs":[{"name":"","type":"uint8","internalType":"enum Vote.TeamMemberID"}],"stateMutability":"view"},{"type":"function","name":"vote","inputs":[{"name":"_teamMemberId","type":"uint8","internalType":"enum Vote.TeamMemberID"}],"outputs":[],"stateMutability":"nonpayable"},{"type":"event","name":"VoteCast","inputs":[{"name":"voter","type":"address","indexed":false,"internalType":"address"},{"name":"teamMemberId","type":"uint8","indexed":false,"internalType":"enum Vote.TeamMemberID"}],"anonymous":false}],"bytecode":{"object":"0x6080604052348015600f57600080fd5b506040516105ba3803806105ba833981016040819052602c916050565b600080546001600160a01b0319166001600160a01b0392909216919091179055607e565b600060208284031215606157600080fd5b81516001600160a01b0381168114607757600080fd5b9392505050565b61052d8061008d6000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80633961f20014610067578063488a571c146100a0578063656eb7f4146100c3578063b3f98adc146100f1578063d3a824bd14610106578063edab90d014610131575b600080fd5b61008a6100753660046103e4565b60026020526000908152604090205460ff1681565b6040516100979190610435565b60405180910390f35b6100b36100ae366004610449565b610144565b6040519015158152602001610097565b6100e36100d1366004610449565b60016020526000908152604090205481565b604051908152602001610097565b6101046100ff366004610449565b6101bd565b005b600054610119906001600160a01b031681565b6040516001600160a01b039091168152602001610097565b6100e361013f366004610471565b610297565b60008061015033610297565b90506000808281526002602052604090205460ff166005811115610176576101766103fd565b036101b4576000818152600260205260409020805484919060ff191660018360058111156101a6576101a66103fd565b021790555060019392505050565b50600092915050565b6101c681610144565b6102105760405162461bcd60e51b8152602060048201526016602482015275165bdd481a185d9948185b1c9958591e481d9bdd195960521b60448201526064015b60405180910390fd5b60016000826005811115610226576102266103fd565b6005811115610237576102376103fd565b815260200190815260200160002060008154809291906102569061049a565b91905055507fefffa0c001f10a86d936643c098510eba656ffab1d0c5165822b79d4c895e88f338260405161028c9291906104c1565b60405180910390a150565b600080546040516305a92fdb60e11b8152600360048201526001600160a01b03848116602483015283921690630b525fb690604401602060405180830381865afa1580156102e9573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061030d91906104de565b90508060011461035f5760405162461bcd60e51b815260206004820152601a60248201527f596f7520646f6e2774206861766520616e792062616c616e63650000000000006044820152606401610207565b600080546040516335fd7d5360e11b8152600660048201526001600160a01b0386811660248301526044820184905290911690636bfafaa690606401602060405180830381865afa1580156103b8573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103dc91906104de565b949350505050565b6000602082840312156103f657600080fd5b5035919050565b634e487b7160e01b600052602160045260246000fd5b6006811061043157634e487b7160e01b600052602160045260246000fd5b9052565b602081016104438284610413565b92915050565b60006020828403121561045b57600080fd5b81356006811061046a57600080fd5b9392505050565b60006020828403121561048357600080fd5b81356001600160a01b038116811461046a57600080fd5b6000600182016104ba57634e487b7160e01b600052601160045260246000fd5b5060010190565b6001600160a01b03831681526040810161046a6020830184610413565b6000602082840312156104f057600080fd5b505191905056fea26469706673582212200ba7be38c4d4185f3957e527530c1040353d4e38c249a40dcc7ace40bfb7cb6964736f6c634300081c0033","sourceMap":"88:2061:39:-:0;;;495:112;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;548:13;:52;;-1:-1:-1;;;;;;548:52:39;-1:-1:-1;;;;;548:52:39;;;;;;;;;;88:2061;;14:290:40;84:6;137:2;125:9;116:7;112:23;108:32;105:52;;;153:1;150;143:12;105:52;179:16;;-1:-1:-1;;;;;224:31:40;;214:42;;204:70;;270:1;267;260:12;204:70;293:5;14:290;-1:-1:-1;;;14:290:40:o;:::-;88:2061:39;;;;;;","linkReferences":{}},"deployedBytecode":{"object":"0x608060405234801561001057600080fd5b50600436106100625760003560e01c80633961f20014610067578063488a571c146100a0578063656eb7f4146100c3578063b3f98adc146100f1578063d3a824bd14610106578063edab90d014610131575b600080fd5b61008a6100753660046103e4565b60026020526000908152604090205460ff1681565b6040516100979190610435565b60405180910390f35b6100b36100ae366004610449565b610144565b6040519015158152602001610097565b6100e36100d1366004610449565b60016020526000908152604090205481565b604051908152602001610097565b6101046100ff366004610449565b6101bd565b005b600054610119906001600160a01b031681565b6040516001600160a01b039091168152602001610097565b6100e361013f366004610471565b610297565b60008061015033610297565b90506000808281526002602052604090205460ff166005811115610176576101766103fd565b036101b4576000818152600260205260409020805484919060ff191660018360058111156101a6576101a66103fd565b021790555060019392505050565b50600092915050565b6101c681610144565b6102105760405162461bcd60e51b8152602060048201526016602482015275165bdd481a185d9948185b1c9958591e481d9bdd195960521b60448201526064015b60405180910390fd5b60016000826005811115610226576102266103fd565b6005811115610237576102376103fd565b815260200190815260200160002060008154809291906102569061049a565b91905055507fefffa0c001f10a86d936643c098510eba656ffab1d0c5165822b79d4c895e88f338260405161028c9291906104c1565b60405180910390a150565b600080546040516305a92fdb60e11b8152600360048201526001600160a01b03848116602483015283921690630b525fb690604401602060405180830381865afa1580156102e9573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061030d91906104de565b90508060011461035f5760405162461bcd60e51b815260206004820152601a60248201527f596f7520646f6e2774206861766520616e792062616c616e63650000000000006044820152606401610207565b600080546040516335fd7d5360e11b8152600660048201526001600160a01b0386811660248301526044820184905290911690636bfafaa690606401602060405180830381865afa1580156103b8573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103dc91906104de565b949350505050565b6000602082840312156103f657600080fd5b5035919050565b634e487b7160e01b600052602160045260246000fd5b6006811061043157634e487b7160e01b600052602160045260246000fd5b9052565b602081016104438284610413565b92915050565b60006020828403121561045b57600080fd5b81356006811061046a57600080fd5b9392505050565b60006020828403121561048357600080fd5b81356001600160a01b038116811461046a57600080fd5b6000600182016104ba57634e487b7160e01b600052601160045260246000fd5b5060010190565b6001600160a01b03831681526040810161046a6020830184610413565b6000602082840312156104f057600080fd5b505191905056fea26469706673582212200ba7be38c4d4185f3957e527530c1040353d4e38c249a40dcc7ace40bfb7cb6964736f6c634300081c0033","sourceMap":"88:2061:39:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;769:62;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;1249:315;;;;;;:::i;:::-;;:::i;:::-;;;1240:14:40;;1233:22;1215:41;;1203:2;1188:18;1249:315:39;1075:187:40;659:55:39;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;1413:25:40;;;1401:2;1386:18;659:55:39;1267:177:40;982:217:39;;;;;;:::i;:::-;;:::i;:::-;;108:34;;;;;-1:-1:-1;;;;;108:34:39;;;;;;-1:-1:-1;;;;;1636:32:40;;;1618:51;;1606:2;1591:18;108:34:39;1449:226:40;1614:533:39;;;;;;:::i;:::-;;:::i;1249:315::-;1310:4;1326:15;1344:27;1360:10;1344:15;:27::i;:::-;1326:45;-1:-1:-1;1420:17:39;1385:31;;;;:22;:31;;;;;;;;:52;;;;;;;;:::i;:::-;;1381:155;;1453:31;;;;:22;:31;;;;;:47;;1487:13;;1453:31;-1:-1:-1;;1453:47:39;;1487:13;1453:47;;;;;;;;:::i;:::-;;;;;-1:-1:-1;1521:4:39;;1249:315;-1:-1:-1;;;1249:315:39:o;1381:155::-;-1:-1:-1;1552:5:39;;1249:315;-1:-1:-1;;1249:315:39:o;982:217::-;1049:22;1057:13;1049:7;:22::i;:::-;1041:57;;;;-1:-1:-1;;;1041:57:39;;2173:2:40;1041:57:39;;;2155:21:40;2212:2;2192:18;;;2185:30;-1:-1:-1;;;2231:18:40;;;2224:52;2293:18;;1041:57:39;;;;;;;;;1109:15;:30;1125:13;1109:30;;;;;;;;:::i;:::-;;;;;;;;;:::i;:::-;;;;;;;;;;;;;:32;;;;;;;;;:::i;:::-;;;;;;1157:35;1166:10;1178:13;1157:35;;;;;;;:::i;:::-;;;;;;;;982:217;:::o;1614:533::-;1678:7;1740:13;;:109;;-1:-1:-1;;;1740:109:39;;192:1;1740:109;;;3050:25:40;-1:-1:-1;;;;;3111:32:40;;;3091:18;;;3084:60;1678:7:39;;1740:13;;:40;;3023:18:40;;1740:109:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1722:127;;1867:7;1878:1;1867:12;1859:51;;;;-1:-1:-1;;;1859:51:39;;3546:2:40;1859:51:39;;;3528:21:40;3585:2;3565:18;;;3558:30;3624:28;3604:18;;;3597:56;3670:18;;1859:51:39;3344:350:40;1859:51:39;1953:15;1971:13;;:145;;-1:-1:-1;;;1971:145:39;;245:1;1971:145;;;3901:25:40;-1:-1:-1;;;;;3962:32:40;;;3942:18;;;3935:60;4011:18;;;4004:34;;;1971:13:39;;;;:44;;3874:18:40;;1971:145:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1953:163;1614:533;-1:-1:-1;;;;1614:533:39:o;14:180:40:-;73:6;126:2;114:9;105:7;101:23;97:32;94:52;;;142:1;139;132:12;94:52;-1:-1:-1;165:23:40;;14:180;-1:-1:-1;14:180:40:o;199:127::-;260:10;255:3;251:20;248:1;241:31;291:4;288:1;281:15;315:4;312:1;305:15;331:240;415:1;408:5;405:12;395:143;;460:10;455:3;451:20;448:1;441:31;495:4;492:1;485:15;523:4;520:1;513:15;395:143;547:18;;331:240::o;576:215::-;726:2;711:18;;738:47;715:9;767:6;738:47;:::i;:::-;576:215;;;;:::o;796:274::-;873:6;926:2;914:9;905:7;901:23;897:32;894:52;;;942:1;939;932:12;894:52;981:9;968:23;1020:1;1013:5;1010:12;1000:40;;1036:1;1033;1026:12;1000:40;1059:5;796:274;-1:-1:-1;;;796:274:40:o;1680:286::-;1739:6;1792:2;1780:9;1771:7;1767:23;1763:32;1760:52;;;1808:1;1805;1798:12;1760:52;1834:23;;-1:-1:-1;;;;;1886:31:40;;1876:42;;1866:70;;1932:1;1929;1922:12;2322:232;2361:3;2382:17;;;2379:140;;2441:10;2436:3;2432:20;2429:1;2422:31;2476:4;2473:1;2466:15;2504:4;2501:1;2494:15;2379:140;-1:-1:-1;2546:1:40;2535:13;;2322:232::o;2559:312::-;-1:-1:-1;;;;;2767:32:40;;2749:51;;2737:2;2722:18;;2809:56;2861:2;2846:18;;2838:6;2809:56;:::i;3155:184::-;3225:6;3278:2;3266:9;3257:7;3253:23;3249:32;3246:52;;;3294:1;3291;3284:12;3246:52;-1:-1:-1;3317:16:40;;3155:184;-1:-1:-1;3155:184:40:o","linkReferences":{}},"methodIdentifiers":{"_loadDataFromL1(address)":"edab90d0","canVote(uint8)":"488a571c","loadL1Storage()":"d3a824bd","memberIDToVotes(uint8)":"656eb7f4","tokenIDToVotedMemberID(uint256)":"3961f200","vote(uint8)":"b3f98adc"},"rawMetadata":"{\"compiler\":{\"version\":\"0.8.28+commit.7893614a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_loadL1StorageAddress\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"voter\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"enum Vote.TeamMemberID\",\"name\":\"teamMemberId\",\"type\":\"uint8\"}],\"name\":\"VoteCast\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"_loadDataFromL1\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"enum Vote.TeamMemberID\",\"name\":\"_teamMemberId\",\"type\":\"uint8\"}],\"name\":\"canVote\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"loadL1Storage\",\"outputs\":[{\"internalType\":\"contract LoadL1Storage\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"enum Vote.TeamMemberID\",\"name\":\"\",\"type\":\"uint8\"}],\"name\":\"memberIDToVotes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"tokenIDToVotedMemberID\",\"outputs\":[{\"internalType\":\"enum Vote.TeamMemberID\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"enum Vote.TeamMemberID\",\"name\":\"_teamMemberId\",\"type\":\"uint8\"}],\"name\":\"vote\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Vote.sol\":\"Vote\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\"]},\"sources\":{\"src/LoadL1Storage.sol\":{\"keccak256\":\"0x41b989f7d2b11cd1f47b4ebe2de094f29defab252e5002bc1434f77e03ea991d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8563d883ee7776467b0a4444b4d685cd1fdc1c2054c3d5a753e8d231a4b61b04\",\"dweb:/ipfs/QmeA6RXMsJFgZhN3EG7hprTmJavvHm9sqozWgojQumyBKj\"]},\"src/Vote.sol\":{\"keccak256\":\"0x74d19991ddc25d7ad5c7c26893786fe3a1f227de23d9fded014bed57238adec2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://49af8c33862a8d497b77145d544b3ca47b5c0a566991bed8b10223bb08b5e73e\",\"dweb:/ipfs/QmdJos9RCiCKk3keXp4sgUnjGwuQspctECpJARZPDVVk3u\"]}},\"version\":1}","metadata":{"compiler":{"version":"0.8.28+commit.7893614a"},"language":"Solidity","output":{"abi":[{"inputs":[{"internalType":"address","name":"_loadL1StorageAddress","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[{"internalType":"address","name":"voter","type":"address","indexed":false},{"internalType":"enum Vote.TeamMemberID","name":"teamMemberId","type":"uint8","indexed":false}],"type":"event","name":"VoteCast","anonymous":false},{"inputs":[{"internalType":"address","name":"_address","type":"address"}],"stateMutability":"view","type":"function","name":"_loadDataFromL1","outputs":[{"internalType":"uint256","name":"","type":"uint256"}]},{"inputs":[{"internalType":"enum Vote.TeamMemberID","name":"_teamMemberId","type":"uint8"}],"stateMutability":"nonpayable","type":"function","name":"canVote","outputs":[{"internalType":"bool","name":"","type":"bool"}]},{"inputs":[],"stateMutability":"view","type":"function","name":"loadL1Storage","outputs":[{"internalType":"contract LoadL1Storage","name":"","type":"address"}]},{"inputs":[{"internalType":"enum Vote.TeamMemberID","name":"","type":"uint8"}],"stateMutability":"view","type":"function","name":"memberIDToVotes","outputs":[{"internalType":"uint256","name":"","type":"uint256"}]},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","name":"tokenIDToVotedMemberID","outputs":[{"internalType":"enum Vote.TeamMemberID","name":"","type":"uint8"}]},{"inputs":[{"internalType":"enum Vote.TeamMemberID","name":"_teamMemberId","type":"uint8"}],"stateMutability":"nonpayable","type":"function","name":"vote"}],"devdoc":{"kind":"dev","methods":{},"version":1},"userdoc":{"kind":"user","methods":{},"version":1}},"settings":{"remappings":["@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/","ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/","erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/","forge-std/=lib/forge-std/src/","halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/","openzeppelin-contracts/=lib/openzeppelin-contracts/"],"optimizer":{"enabled":true,"runs":200},"metadata":{"bytecodeHash":"ipfs"},"compilationTarget":{"src/Vote.sol":"Vote"},"evmVersion":"paris","libraries":{}},"sources":{"src/LoadL1Storage.sol":{"keccak256":"0x41b989f7d2b11cd1f47b4ebe2de094f29defab252e5002bc1434f77e03ea991d","urls":["bzz-raw://8563d883ee7776467b0a4444b4d685cd1fdc1c2054c3d5a753e8d231a4b61b04","dweb:/ipfs/QmeA6RXMsJFgZhN3EG7hprTmJavvHm9sqozWgojQumyBKj"],"license":"MIT"},"src/Vote.sol":{"keccak256":"0x74d19991ddc25d7ad5c7c26893786fe3a1f227de23d9fded014bed57238adec2","urls":["bzz-raw://49af8c33862a8d497b77145d544b3ca47b5c0a566991bed8b10223bb08b5e73e","dweb:/ipfs/QmdJos9RCiCKk3keXp4sgUnjGwuQspctECpJARZPDVVk3u"],"license":"MIT"}},"version":1},"id":39}
+{
+  "abi": [
+    {
+      "type": "constructor",
+      "inputs": [
+        {
+          "name": "_loadL1StorageAddress",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "_loadDataFromL1",
+      "inputs": [
+        { "name": "_address", "type": "address", "internalType": "address" }
+      ],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "canVote",
+      "inputs": [
+        {
+          "name": "_teamMemberId",
+          "type": "uint8",
+          "internalType": "enum Vote.TeamMemberID"
+        }
+      ],
+      "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "loadL1Storage",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "contract LoadL1Storage"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "memberIDToVotes",
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint8",
+          "internalType": "enum Vote.TeamMemberID"
+        }
+      ],
+      "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "tokenIDToVotedMemberID",
+      "inputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint8",
+          "internalType": "enum Vote.TeamMemberID"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "vote",
+      "inputs": [
+        {
+          "name": "_teamMemberId",
+          "type": "uint8",
+          "internalType": "enum Vote.TeamMemberID"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "event",
+      "name": "VoteCast",
+      "inputs": [
+        {
+          "name": "voter",
+          "type": "address",
+          "indexed": false,
+          "internalType": "address"
+        },
+        {
+          "name": "teamMemberId",
+          "type": "uint8",
+          "indexed": false,
+          "internalType": "enum Vote.TeamMemberID"
+        }
+      ],
+      "anonymous": false
+    }
+  ],
+  "bytecode": {
+    "object": "0x6080604052348015600f57600080fd5b506040516105ba3803806105ba833981016040819052602c916050565b600080546001600160a01b0319166001600160a01b0392909216919091179055607e565b600060208284031215606157600080fd5b81516001600160a01b0381168114607757600080fd5b9392505050565b61052d8061008d6000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80633961f20014610067578063488a571c146100a0578063656eb7f4146100c3578063b3f98adc146100f1578063d3a824bd14610106578063edab90d014610131575b600080fd5b61008a6100753660046103e4565b60026020526000908152604090205460ff1681565b6040516100979190610435565b60405180910390f35b6100b36100ae366004610449565b610144565b6040519015158152602001610097565b6100e36100d1366004610449565b60016020526000908152604090205481565b604051908152602001610097565b6101046100ff366004610449565b6101bd565b005b600054610119906001600160a01b031681565b6040516001600160a01b039091168152602001610097565b6100e361013f366004610471565b610297565b60008061015033610297565b90506000808281526002602052604090205460ff166005811115610176576101766103fd565b036101b4576000818152600260205260409020805484919060ff191660018360058111156101a6576101a66103fd565b021790555060019392505050565b50600092915050565b6101c681610144565b6102105760405162461bcd60e51b8152602060048201526016602482015275165bdd481a185d9948185b1c9958591e481d9bdd195960521b60448201526064015b60405180910390fd5b60016000826005811115610226576102266103fd565b6005811115610237576102376103fd565b815260200190815260200160002060008154809291906102569061049a565b91905055507fefffa0c001f10a86d936643c098510eba656ffab1d0c5165822b79d4c895e88f338260405161028c9291906104c1565b60405180910390a150565b600080546040516305a92fdb60e11b8152600360048201526001600160a01b03848116602483015283921690630b525fb690604401602060405180830381865afa1580156102e9573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061030d91906104de565b90508060011461035f5760405162461bcd60e51b815260206004820152601a60248201527f596f7520646f6e2774206861766520616e792062616c616e63650000000000006044820152606401610207565b600080546040516335fd7d5360e11b8152600660048201526001600160a01b0386811660248301526044820184905290911690636bfafaa690606401602060405180830381865afa1580156103b8573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103dc91906104de565b949350505050565b6000602082840312156103f657600080fd5b5035919050565b634e487b7160e01b600052602160045260246000fd5b6006811061043157634e487b7160e01b600052602160045260246000fd5b9052565b602081016104438284610413565b92915050565b60006020828403121561045b57600080fd5b81356006811061046a57600080fd5b9392505050565b60006020828403121561048357600080fd5b81356001600160a01b038116811461046a57600080fd5b6000600182016104ba57634e487b7160e01b600052601160045260246000fd5b5060010190565b6001600160a01b03831681526040810161046a6020830184610413565b6000602082840312156104f057600080fd5b505191905056fea26469706673582212200ba7be38c4d4185f3957e527530c1040353d4e38c249a40dcc7ace40bfb7cb6964736f6c634300081c0033",
+    "sourceMap": "88:2061:39:-:0;;;495:112;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;548:13;:52;;-1:-1:-1;;;;;;548:52:39;-1:-1:-1;;;;;548:52:39;;;;;;;;;;88:2061;;14:290:40;84:6;137:2;125:9;116:7;112:23;108:32;105:52;;;153:1;150;143:12;105:52;179:16;;-1:-1:-1;;;;;224:31:40;;214:42;;204:70;;270:1;267;260:12;204:70;293:5;14:290;-1:-1:-1;;;14:290:40:o;:::-;88:2061:39;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80633961f20014610067578063488a571c146100a0578063656eb7f4146100c3578063b3f98adc146100f1578063d3a824bd14610106578063edab90d014610131575b600080fd5b61008a6100753660046103e4565b60026020526000908152604090205460ff1681565b6040516100979190610435565b60405180910390f35b6100b36100ae366004610449565b610144565b6040519015158152602001610097565b6100e36100d1366004610449565b60016020526000908152604090205481565b604051908152602001610097565b6101046100ff366004610449565b6101bd565b005b600054610119906001600160a01b031681565b6040516001600160a01b039091168152602001610097565b6100e361013f366004610471565b610297565b60008061015033610297565b90506000808281526002602052604090205460ff166005811115610176576101766103fd565b036101b4576000818152600260205260409020805484919060ff191660018360058111156101a6576101a66103fd565b021790555060019392505050565b50600092915050565b6101c681610144565b6102105760405162461bcd60e51b8152602060048201526016602482015275165bdd481a185d9948185b1c9958591e481d9bdd195960521b60448201526064015b60405180910390fd5b60016000826005811115610226576102266103fd565b6005811115610237576102376103fd565b815260200190815260200160002060008154809291906102569061049a565b91905055507fefffa0c001f10a86d936643c098510eba656ffab1d0c5165822b79d4c895e88f338260405161028c9291906104c1565b60405180910390a150565b600080546040516305a92fdb60e11b8152600360048201526001600160a01b03848116602483015283921690630b525fb690604401602060405180830381865afa1580156102e9573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061030d91906104de565b90508060011461035f5760405162461bcd60e51b815260206004820152601a60248201527f596f7520646f6e2774206861766520616e792062616c616e63650000000000006044820152606401610207565b600080546040516335fd7d5360e11b8152600660048201526001600160a01b0386811660248301526044820184905290911690636bfafaa690606401602060405180830381865afa1580156103b8573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103dc91906104de565b949350505050565b6000602082840312156103f657600080fd5b5035919050565b634e487b7160e01b600052602160045260246000fd5b6006811061043157634e487b7160e01b600052602160045260246000fd5b9052565b602081016104438284610413565b92915050565b60006020828403121561045b57600080fd5b81356006811061046a57600080fd5b9392505050565b60006020828403121561048357600080fd5b81356001600160a01b038116811461046a57600080fd5b6000600182016104ba57634e487b7160e01b600052601160045260246000fd5b5060010190565b6001600160a01b03831681526040810161046a6020830184610413565b6000602082840312156104f057600080fd5b505191905056fea26469706673582212200ba7be38c4d4185f3957e527530c1040353d4e38c249a40dcc7ace40bfb7cb6964736f6c634300081c0033",
+    "sourceMap": "88:2061:39:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;769:62;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;1249:315;;;;;;:::i;:::-;;:::i;:::-;;;1240:14:40;;1233:22;1215:41;;1203:2;1188:18;1249:315:39;1075:187:40;659:55:39;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;1413:25:40;;;1401:2;1386:18;659:55:39;1267:177:40;982:217:39;;;;;;:::i;:::-;;:::i;:::-;;108:34;;;;;-1:-1:-1;;;;;108:34:39;;;;;;-1:-1:-1;;;;;1636:32:40;;;1618:51;;1606:2;1591:18;108:34:39;1449:226:40;1614:533:39;;;;;;:::i;:::-;;:::i;1249:315::-;1310:4;1326:15;1344:27;1360:10;1344:15;:27::i;:::-;1326:45;-1:-1:-1;1420:17:39;1385:31;;;;:22;:31;;;;;;;;:52;;;;;;;;:::i;:::-;;1381:155;;1453:31;;;;:22;:31;;;;;:47;;1487:13;;1453:31;-1:-1:-1;;1453:47:39;;1487:13;1453:47;;;;;;;;:::i;:::-;;;;;-1:-1:-1;1521:4:39;;1249:315;-1:-1:-1;;;1249:315:39:o;1381:155::-;-1:-1:-1;1552:5:39;;1249:315;-1:-1:-1;;1249:315:39:o;982:217::-;1049:22;1057:13;1049:7;:22::i;:::-;1041:57;;;;-1:-1:-1;;;1041:57:39;;2173:2:40;1041:57:39;;;2155:21:40;2212:2;2192:18;;;2185:30;-1:-1:-1;;;2231:18:40;;;2224:52;2293:18;;1041:57:39;;;;;;;;;1109:15;:30;1125:13;1109:30;;;;;;;;:::i;:::-;;;;;;;;;:::i;:::-;;;;;;;;;;;;;:32;;;;;;;;;:::i;:::-;;;;;;1157:35;1166:10;1178:13;1157:35;;;;;;;:::i;:::-;;;;;;;;982:217;:::o;1614:533::-;1678:7;1740:13;;:109;;-1:-1:-1;;;1740:109:39;;192:1;1740:109;;;3050:25:40;-1:-1:-1;;;;;3111:32:40;;;3091:18;;;3084:60;1678:7:39;;1740:13;;:40;;3023:18:40;;1740:109:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1722:127;;1867:7;1878:1;1867:12;1859:51;;;;-1:-1:-1;;;1859:51:39;;3546:2:40;1859:51:39;;;3528:21:40;3585:2;3565:18;;;3558:30;3624:28;3604:18;;;3597:56;3670:18;;1859:51:39;3344:350:40;1859:51:39;1953:15;1971:13;;:145;;-1:-1:-1;;;1971:145:39;;245:1;1971:145;;;3901:25:40;-1:-1:-1;;;;;3962:32:40;;;3942:18;;;3935:60;4011:18;;;4004:34;;;1971:13:39;;;;:44;;3874:18:40;;1971:145:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;1953:163;1614:533;-1:-1:-1;;;;1614:533:39:o;14:180:40:-;73:6;126:2;114:9;105:7;101:23;97:32;94:52;;;142:1;139;132:12;94:52;-1:-1:-1;165:23:40;;14:180;-1:-1:-1;14:180:40:o;199:127::-;260:10;255:3;251:20;248:1;241:31;291:4;288:1;281:15;315:4;312:1;305:15;331:240;415:1;408:5;405:12;395:143;;460:10;455:3;451:20;448:1;441:31;495:4;492:1;485:15;523:4;520:1;513:15;395:143;547:18;;331:240::o;576:215::-;726:2;711:18;;738:47;715:9;767:6;738:47;:::i;:::-;576:215;;;;:::o;796:274::-;873:6;926:2;914:9;905:7;901:23;897:32;894:52;;;942:1;939;932:12;894:52;981:9;968:23;1020:1;1013:5;1010:12;1000:40;;1036:1;1033;1026:12;1000:40;1059:5;796:274;-1:-1:-1;;;796:274:40:o;1680:286::-;1739:6;1792:2;1780:9;1771:7;1767:23;1763:32;1760:52;;;1808:1;1805;1798:12;1760:52;1834:23;;-1:-1:-1;;;;;1886:31:40;;1876:42;;1866:70;;1932:1;1929;1922:12;2322:232;2361:3;2382:17;;;2379:140;;2441:10;2436:3;2432:20;2429:1;2422:31;2476:4;2473:1;2466:15;2504:4;2501:1;2494:15;2379:140;-1:-1:-1;2546:1:40;2535:13;;2322:232::o;2559:312::-;-1:-1:-1;;;;;2767:32:40;;2749:51;;2737:2;2722:18;;2809:56;2861:2;2846:18;;2838:6;2809:56;:::i;3155:184::-;3225:6;3278:2;3266:9;3257:7;3253:23;3249:32;3246:52;;;3294:1;3291;3284:12;3246:52;-1:-1:-1;3317:16:40;;3155:184;-1:-1:-1;3155:184:40:o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "_loadDataFromL1(address)": "edab90d0",
+    "canVote(uint8)": "488a571c",
+    "loadL1Storage()": "d3a824bd",
+    "memberIDToVotes(uint8)": "656eb7f4",
+    "tokenIDToVotedMemberID(uint256)": "3961f200",
+    "vote(uint8)": "b3f98adc"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.28+commit.7893614a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_loadL1StorageAddress\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"voter\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"enum Vote.TeamMemberID\",\"name\":\"teamMemberId\",\"type\":\"uint8\"}],\"name\":\"VoteCast\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"_loadDataFromL1\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"enum Vote.TeamMemberID\",\"name\":\"_teamMemberId\",\"type\":\"uint8\"}],\"name\":\"canVote\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"loadL1Storage\",\"outputs\":[{\"internalType\":\"contract LoadL1Storage\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"enum Vote.TeamMemberID\",\"name\":\"\",\"type\":\"uint8\"}],\"name\":\"memberIDToVotes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"tokenIDToVotedMemberID\",\"outputs\":[{\"internalType\":\"enum Vote.TeamMemberID\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"enum Vote.TeamMemberID\",\"name\":\"_teamMemberId\",\"type\":\"uint8\"}],\"name\":\"vote\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Vote.sol\":\"Vote\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\"]},\"sources\":{\"src/LoadL1Storage.sol\":{\"keccak256\":\"0x41b989f7d2b11cd1f47b4ebe2de094f29defab252e5002bc1434f77e03ea991d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8563d883ee7776467b0a4444b4d685cd1fdc1c2054c3d5a753e8d231a4b61b04\",\"dweb:/ipfs/QmeA6RXMsJFgZhN3EG7hprTmJavvHm9sqozWgojQumyBKj\"]},\"src/Vote.sol\":{\"keccak256\":\"0x74d19991ddc25d7ad5c7c26893786fe3a1f227de23d9fded014bed57238adec2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://49af8c33862a8d497b77145d544b3ca47b5c0a566991bed8b10223bb08b5e73e\",\"dweb:/ipfs/QmdJos9RCiCKk3keXp4sgUnjGwuQspctECpJARZPDVVk3u\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": { "version": "0.8.28+commit.7893614a" },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_loadL1StorageAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "voter",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "enum Vote.TeamMemberID",
+              "name": "teamMemberId",
+              "type": "uint8",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "VoteCast",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            { "internalType": "address", "name": "_address", "type": "address" }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "_loadDataFromL1",
+          "outputs": [
+            { "internalType": "uint256", "name": "", "type": "uint256" }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "enum Vote.TeamMemberID",
+              "name": "_teamMemberId",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "canVote",
+          "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "loadL1Storage",
+          "outputs": [
+            {
+              "internalType": "contract LoadL1Storage",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "enum Vote.TeamMemberID",
+              "name": "",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "memberIDToVotes",
+          "outputs": [
+            { "internalType": "uint256", "name": "", "type": "uint256" }
+          ]
+        },
+        {
+          "inputs": [
+            { "internalType": "uint256", "name": "", "type": "uint256" }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "tokenIDToVotedMemberID",
+          "outputs": [
+            {
+              "internalType": "enum Vote.TeamMemberID",
+              "name": "",
+              "type": "uint8"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "enum Vote.TeamMemberID",
+              "name": "_teamMemberId",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "vote"
+        }
+      ],
+      "devdoc": { "kind": "dev", "methods": {}, "version": 1 },
+      "userdoc": { "kind": "user", "methods": {}, "version": 1 }
+    },
+    "settings": {
+      "remappings": [
+        "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        "ds-test/=lib/openzeppelin-contracts/lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/"
+      ],
+      "optimizer": { "enabled": true, "runs": 200 },
+      "metadata": { "bytecodeHash": "ipfs" },
+      "compilationTarget": { "src/Vote.sol": "Vote" },
+      "evmVersion": "paris",
+      "libraries": {}
+    },
+    "sources": {
+      "src/LoadL1Storage.sol": {
+        "keccak256": "0x41b989f7d2b11cd1f47b4ebe2de094f29defab252e5002bc1434f77e03ea991d",
+        "urls": [
+          "bzz-raw://8563d883ee7776467b0a4444b4d685cd1fdc1c2054c3d5a753e8d231a4b61b04",
+          "dweb:/ipfs/QmeA6RXMsJFgZhN3EG7hprTmJavvHm9sqozWgojQumyBKj"
+        ],
+        "license": "MIT"
+      },
+      "src/Vote.sol": {
+        "keccak256": "0x74d19991ddc25d7ad5c7c26893786fe3a1f227de23d9fded014bed57238adec2",
+        "urls": [
+          "bzz-raw://49af8c33862a8d497b77145d544b3ca47b5c0a566991bed8b10223bb08b5e73e",
+          "dweb:/ipfs/QmdJos9RCiCKk3keXp4sgUnjGwuQspctECpJARZPDVVk3u"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "id": 39
+}
