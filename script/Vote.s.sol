@@ -2,8 +2,8 @@
 pragma solidity ^0.8.13;
 
 import {Script, console} from "forge-std/Script.sol";
-import {Vote} from "../src/Vote.sol";
-import {LoadL1Storage} from "../src/LoadL1Storage.sol";
+import {Vote} from "../contracts/Vote.sol";
+import {LoadL1Storage} from "../contracts/LoadL1Storage.sol";
 
 contract VoteScript is Script {
     Vote public vote;

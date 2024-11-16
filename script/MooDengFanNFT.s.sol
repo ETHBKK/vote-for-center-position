@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import {Script, console} from "forge-std/Script.sol";
-import {MooDengFan} from "../src/MooDengFanNFT.sol";
+import {MooDengFan} from "../contracts/MooDengFanNFT.sol";
 
 contract MooDengFanNFTScript is Script {
     MooDengFan public mooDengFan;
