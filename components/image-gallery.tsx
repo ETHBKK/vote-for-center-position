@@ -7,6 +7,7 @@ import VoteButton from '@/components/vote-button';
 import { voteAbi } from '@/lib/vote-contract';
 import { l2VoteContractAddress } from '@/const/contracts';
 import { scrollDevnet } from '@/const/chains';
+import { toast } from '@/hooks/use-toast';
 
 export type ImageData = {
   id: number;
@@ -34,6 +35,7 @@ export default function ImageGallery({ images }: { images: ImageData[] }) {
           ],
         })
         console.log({result})
+        toast({ title: "Voted" })
       } catch (err) {
         console.error({ err })
       }
