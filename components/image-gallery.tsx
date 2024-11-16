@@ -1,5 +1,12 @@
 import Image from 'next/image'
+import { useActiveAccount } from 'thirdweb/react';
+import { writeContract } from '@wagmi/core'
+
+import { config } from '@/config'
 import VoteButton from '@/components/vote-button';
+import { voteAbi } from '@/lib/vote-contract';
+import { l2VoteContractAddress } from '@/const/contracts';
+import { scrollDevnet } from '@/const/chains';
 
 export type ImageData = {
   id: number;
@@ -9,9 +16,30 @@ export type ImageData = {
 };
 
 export default function ImageGallery({ images }: { images: ImageData[] }) {
-  const handleVoteClick = (index: number) => {
-    // TODO: call smart contract to vote
-    console.log('Vote button clicked!', index);
+  const activeAccount = useActiveAccount();
+
+  const handleVoteClick = async (id: number) => {
+    if (activeAccount) {
+      try {
+        console.log('Vote button clicked!', id);
+
+        // wagmi
+        const result = await writeContract(config, {
+          abi: voteAbi,
+          address: l2VoteContractAddress,
+          chain: scrollDevnet,
+          functionName: 'vote',
+          args: [
+            id
+          ],
+        })
+        console.log({result})
+      } catch (err) {
+        console.error({ err })
+      }
+    } else {
+      console.log("handleVoteClick error - no activeAccount")
+    }
   };
 
   return (
