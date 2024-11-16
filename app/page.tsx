@@ -7,6 +7,7 @@ import { useTwebContext } from "@/contexts/thirdweb";
 import { client } from "@/lib/thirdweb-client";
 import { scrollDevnet } from "@/const/chains";
 import { l2VoteContractAddress } from "@/const/contracts";
+import ImageGallery from "@/components/image-gallery";
 
 const l2VoteContract = getContract({
   client,
@@ -147,7 +148,8 @@ export default function Home() {
 
   return (
     <section>
-      HOME
+      <h1 className="text-2xl font-bold text-center my-8">Moo Deng</h1>
+      <ImageGallery />
     </section>
   );
 }
