@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.28;
+pragma solidity ^0.8.22;
 
 contract LoadL1Storage {
     address immutable L1SLOAD_PRECOMPILE = 0x0000000000000000000000000000000000000101;
-    address immutable l1sloadContractAddress;
+    address immutable L1SLOAD_STORAGE;
 
-    constructor(address _l1sloadContractAddress) {
-        l1sloadContractAddress = _l1sloadContractAddress;
+    constructor(address _l1Storage) {
+        L1SLOAD_STORAGE = _l1Storage;
     }
 
     // Retrieve mapping(address => uint256)
@@ -17,7 +17,7 @@ contract LoadL1Storage {
     {
         (bool success, bytes memory data) = L1SLOAD_PRECOMPILE.staticcall(
             abi.encodePacked(
-                l1sloadContractAddress,
+                L1SLOAD_STORAGE,
                 uint256(keccak256(abi.encodePacked(uint256(uint160(_mappingAddress)), variableStorageSlot)))
             )
         );
@@ -37,7 +37,7 @@ contract LoadL1Storage {
         bytes32 finalSlot = keccak256(abi.encodePacked(_mappingUintIndex, initialSlot));
 
         (bool success, bytes memory data) =
-            L1SLOAD_PRECOMPILE.staticcall(abi.encodePacked(l1sloadContractAddress, finalSlot));
+            L1SLOAD_PRECOMPILE.staticcall(abi.encodePacked(L1SLOAD_STORAGE, finalSlot));
         if (!success) {
             revert("Error extracting nested mapping data");
         }
