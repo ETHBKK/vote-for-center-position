@@ -31,7 +31,7 @@ contract Vote {
     mapping(TeamMemberID => uint256) public memberIDToVotes;
 
     // Mapping to track if an address has voted
-    mapping(uint256 => TeamMemberID) public tokenIDVoteRecords;
+    mapping(uint256 => TeamMemberID) public tokenIDToVotedMemberID;
 
     // Event to emit when a vote is cast
     event VoteCast(address voter, TeamMemberID teamMemberId);
@@ -48,8 +48,8 @@ contract Vote {
     // Function to check if caller can vote
     function canVote(TeamMemberID _teamMemberId) public returns (bool) {
         uint256 tokenId = _loadDataFromL1(msg.sender);
-        if (tokenIDVoteRecords[tokenId] == TeamMemberID.NONE) {
-            tokenIDVoteRecords[tokenId] = _teamMemberId;
+        if (tokenIDToVotedMemberID[tokenId] == TeamMemberID.NONE) {
+            tokenIDToVotedMemberID[tokenId] = _teamMemberId;
             return true;
         }
         return false;
@@ -58,12 +58,18 @@ contract Vote {
     // Function to check if caller can vote
     function _loadDataFromL1(address _address) public view returns (uint256) {
         // check balance
-        uint256 balance = loadL1Storage.retrieveL1AddressToMapping(L1_BALANCE_STORAGE_SLOT, _address);
+        uint256 balance = loadL1Storage.retrieveL1AddressToMapping(
+            L1_BALANCE_STORAGE_SLOT,
+            _address
+        );
         require(balance == 1, "You don't have any balance");
 
         // get token_id from L1
-        uint256 tokenId =
-            loadL1Storage.retrieveL1AddressToNestMapping(L1_OWNWESHIP_STORAGE_SLOT, _address, USER_TOKEN_INDEX);
+        uint256 tokenId = loadL1Storage.retrieveL1AddressToNestMapping(
+            L1_OWNWESHIP_STORAGE_SLOT,
+            _address,
+            USER_TOKEN_INDEX
+        );
         return tokenId;
     }
 }
