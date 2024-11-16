@@ -14,5 +14,6 @@ export const scrollDevnet = defineChain({
     },
   ],
   testnet: true,
+  rpc: "https://l1sload-rpc.scroll.io"
 });
 
